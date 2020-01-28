@@ -26,4 +26,10 @@ describe('<Event /> component', () => {
         expect(EventWrapper.state('showHideFlag')).toBe(true);
     });
 
+    test('hide event description', () => {
+        const eventObject = { target: { value: 'false' }};
+        EventWrapper.find('.details').simulate('click', eventObject);
+        expect(EventWrapper.state('showHideFlag')).toBe(false);
+    });
+
 });
