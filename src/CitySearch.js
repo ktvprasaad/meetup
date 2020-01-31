@@ -53,7 +53,7 @@ class CitySearch extends Component {
                 <ul className="suggestions">
                     {this.state.suggestions.map(item => 
                         <li key={item.name_string} 
-                        onClick={() => this.handleItemClicked(item.name_string, item.lat, item,lon)}>
+                        onClick={() => this.handleItemClicked(item.name_string, item.lat, item.lon)}>
                             {item.name_string}
                         </li>
                     )}
