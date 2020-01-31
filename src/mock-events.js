@@ -40,7 +40,7 @@ const mockEvents = {
           timezone: 'Europe/Berlin'
         },
         link: 'https://www.meetup.com/Munchen-Meanings-of-Life-in-Buddhism-Meetup/events/268259064/',
-        description: '<p>Why were we born? Why are we living? What is the purpose of our life?<br/>What determines a good fate of happiness, or a bad fate of misfortune?<br/>We will have a Skype session to learn how Buddhism answers to these questions.<br/>If you want to join us, please send your Skype ID to "bobo.yanuar" or by clicking this link: <a href="https://join.skype.com/SWPEaF5Vu6Wk" class="linkified">https://join.skype.com/SWPEaF5Vu6Wk</a><br/>We also have our whatsapp group: <a href="https://chat.whatsapp.com/DnBijHRH4pTFQ7W5ymyPLI" class="linkified">https://chat.whatsapp.com/DnBijHRH4pTFQ7W5ymyPLI</a><br/>If any questions, please contact [masked]<br/>The session will be shared only via Skype</p>',
+        description: '<p>Why were we born? Why are we living? What is the purpose of our life?</p>',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -58,17 +58,6 @@ const mockEvents = {
         utc_offset: 3600000,
         waitlist_count: 0,
         yes_rsvp_count: 3,
-        venue: {
-          id: 26820952,
-          name: 'Odeonspl. 15',
-          lat: 48.1438102722168,
-          lon: 11.578198432922363,
-          repinned: false,
-          address_1: 'Odeonspl. 15',
-          city: 'München',
-          country: 'de',
-          localized_country_name: 'Germany'
-        },
         group: {
           created: 1540109682000,
           name: 'München Drink&Click™',
@@ -86,65 +75,9 @@ const mockEvents = {
         },
         link: 'https://www.meetup.com/Munchen-Drink-Click/events/268057247/',
         how_to_find_us: 'Irgendwo im Starbucks oder davor oder dahinter. (Es gibt einen zweiten Eingang zum Hofgarten hin). Du erkennst uns an den Kameras. :-) ',
-        description: '<p>Frei übersetzt. Das internationale Thema des Drick &amp; Click weltweit ist "Rat\'s Eye View".</p> <p>Das geht ja fast überall. Dehalb treffen wir uns beim bewährten Starbucks am Hofgarten. Von dort aus haben wir den Hofgarten, die Leopoldstraße die ganze Innenstadt und alles vor der Haustür. Ein paar überdachte öffentliche Orte sind auch nicht weit.</p> <p>Fürs Drink (ab ca. 17 Uhr) nehme ich gern Vorschläge an. Wenn die Gruppe klein bleibt, dann können wir eh spontan entscheiden. Wenn sich mehrere anmelden, dann reserviere ich etwas.<br/>Wegen der möglichen Reservierung die Bitte: SAGE NUR (FEST) ZU, WENN DU AUCH ZUM DRINK/EAT BLEIBST, bzw. nur dafür dazu kommst.</p> <p>Apropos kleine Gruppe: Die Veranstaltung wird neben MeetUp auch auf facebook und in der fotocommunity beworben. Bitte melde Dich nur einmal an und bedenke, dass es auch statt findet, wenn Dein Termin nur wenige Zusagen hat. Wir sind meist so ein halbes Duzend insgesamt, manchmal mehr, manchmal weniger.</p> <p>Für Spätkommer teile ich meinen Standort in unserer WhatsApp-Gruppe. Neue Teilnehmer bekommen den Link zur Gruppe von mir in einer persönlichen Nachricht.</p>',
+        description: '<p>Frei übersetzt. Das internationale Thema des Drick &amp; Click weltweit ist "Rat\'s Eye View".</p>',
         visibility: 'public',
         member_pay_fee: false
-      },
-      {
-        local_time: '19:00',
-        local_date: '2020-02-11',
-        link: 'https://www.meetup.com/Munich-Girl-Gone-International/events/267292966/',
-        visibility: 'public_limited',
-        group: {
-          created: 1380914527000,
-          name: 'Munich | Girl Gone International',
-          id: 10552542,
-          join_mode: 'approval',
-          lat: 48.13999938964844,
-          lon: 11.579999923706055,
-          urlname: 'Munich-Girl-Gone-International',
-          who: 'Girls Gone International',
-          localized_location: 'München, Germany',
-          state: '',
-          country: 'de',
-          region: 'en_US',
-          timezone: 'Europe/Berlin'
-        },
-        waitlist_count: 0,
-        yes_rsvp_count: 2,
-        duration: 7200000,
-        time: 1581444000000,
-        utc_offset: 3600000,
-        name: 'GGI Book Club - February: 84, Charing Cross Road by Helen Hanff',
-        id: '267292966'
-      },
-      {
-        local_time: '19:00',
-        local_date: '2020-02-05',
-        link: 'https://www.meetup.com/munichmingle/events/267915377/',
-        visibility: 'public_limited',
-        group: {
-          created: 1552581049000,
-          name: 'Munich Mingle',
-          id: 31389319,
-          join_mode: 'approval',
-          lat: 48.13999938964844,
-          lon: 11.579999923706055,
-          urlname: 'munichmingle',
-          who: 'members',
-          localized_location: 'München, Germany',
-          state: '',
-          country: 'de',
-          region: 'en_US',
-          timezone: 'Europe/Berlin'
-        },
-        waitlist_count: 0,
-        yes_rsvp_count: 5,
-        duration: 10800000,
-        time: 1580925600000,
-        utc_offset: 3600000,
-        name: '🎲 Game Night | games provided | 1 free drink',
-        id: '267915377'
       },
       {
         created: 1522694856000,
@@ -176,7 +109,7 @@ const mockEvents = {
           timezone: 'Europe/Berlin'
         },
         link: 'https://www.meetup.com/deutsch-japanischer-stammtisch/events/lkgknpybcfbkc/',
-        description: '<p>Wir treffen uns einmal im Monat zum Sprach- und Kulturaustausch. Außerdem wird ein interessanter Vortrag rund um das Thema Japan gehalten. 
+        description: '<p>Why were we born? Why are we living? What is the purpose of our life?</p>',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -187,7 +120,6 @@ const mockEvents = {
           accepts: 'cash',
           amount: 10,
           currency: 'EUR',
-          description: '',
           label: 'Price',
           required: false
         },
@@ -203,17 +135,6 @@ const mockEvents = {
         utc_offset: 3600000,
         waitlist_count: 0,
         yes_rsvp_count: 17,
-        venue: {
-          id: 26820928,
-          name: 'Schwanthalerstraße 156',
-          lat: 48.13792037963867,
-          lon: 11.54401969909668,
-          repinned: true,
-          address_1: 'Schwanthalerstraße 156',
-          city: 'München',
-          country: 'de',
-          localized_country_name: 'Germany'
-        },
         group: {
           created: 1500930561000,
           name: 'Photography Workshops Munich',
@@ -230,7 +151,7 @@ const mockEvents = {
           timezone: 'Europe/Berlin'
         },
         link: 'https://www.meetup.com/Munchen-Photography-Workshops/events/268001205/',
-        description: '<p>Seid (wieder) herzlich eingeladen zu meinem Foto Workshop zum Thema People And Street Photography - how to get in touch with the people.</p
+        description: '<p>Why were we born? Why are we living? What is the purpose of our life?</p>',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -241,7 +162,6 @@ const mockEvents = {
           accepts: 'paypal',
           amount: 60,
           currency: 'EUR',
-          description: '',
           label: 'Price',
           required: true
         },
@@ -257,17 +177,6 @@ const mockEvents = {
         utc_offset: 7200000,
         waitlist_count: 0,
         yes_rsvp_count: 1,
-        venue: {
-          id: 26589310,
-          name: 'Studio 148 - Ausatmen. Einatmen.',
-          lat: 48.151973724365234,
-          lon: 11.561727523803711,
-          repinned: false,
-          address_1: 'Theresienstraße 148',
-          city: 'München',
-          country: 'de',
-          localized_country_name: 'Germany'
-        },
         group: {
           created: 1514739324000,
           name: 'Alpen Yoga München. Yoga, Wandern & Entspannen!',
@@ -285,7 +194,7 @@ const mockEvents = {
         },
         link: 'https://www.meetup.com/Alpen-Yoga-Muenchen-Wandern-Yoga-und-Entspannen/events/268110411/',
         how_to_find_us: 'Wir sind im oberen Raum',
-        description: '<p>Hallo ihr Lieben,<br/>Lust auf Yoga? Komm für 4x75 Min. in den Basic-Kurs für Einsteiger! Damit lernst Du alle Grundlagen, kannst Verspannungen im Körper lösen und Beweglichkeit aufbauen.</p> <p>Daten: April 07. / 14. / 21. / 28.</p> <p>Jetzt hier anmelden!<br/><a href="https://www.re-chargeme.com/angebot/yoga-in-münchen/" class="linkified">https://www.re-chargeme.com/angebot/yoga-in-münchen/</a> oder direkt über Meetup buchen.</p> <p>Ich freu mich auf Dich!<br/>Lena</p> <p>Weitere Infos:<br/>Der Basic Kurs lässt Dich Deinen Körper wieder spüren, unterstützt den Muskelaufbau in Beinen, Rücken, Po und Armen und verbessert die Beweglichkeit der Muskulatur und des Faszienkorsetts. Optimal für Yoga-Einsteiger und Yogis, die es etwas ruhiger angehen möchten.</p> <p>Kursinhalt: Stehhaltungen, Vorbeugen &amp; Hüftöffner, Rückbeugen, Umkehrhaltungen, Meditation, Entspannungsübungen</p> <p>Vorteile für Dich:<br/>- Einfache Übungen mit detaillierter Erklärung<br/>- Vermittlung von Yoga Basiswissen<br/>- 4 Themen-Schwerpunkte</p>',
+        description: '<p>Hallo ihr Lieben,<br/>Lust auf Yoga? Komm für 4x75 Min. in den Basic-Kurs für Einsteiger!</p>',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -319,7 +228,7 @@ const mockEvents = {
           timezone: 'Europe/Berlin'
         },
         link: 'https://www.meetup.com/Munchen-Meanings-of-Life-in-Buddhism-Meetup/events/268259084/',
-        description: '<p>Why were we born? Why are we living? What is the purpose of our life?<br/>What determines a good fate of happiness, or a bad fate of misfortune?<br/>We will have a Skype session to learn how Buddhism answers to these questions.<br/>If you want to join us, please send your Skype ID to "bobo.yanuar" or by clicking this link: <a href="https://join.skype.com/SWPEaF5Vu6Wk" class="linkified">https://join.skype.com/SWPEaF5Vu6Wk</a><br/>We also have our whatsapp group: <a href="https://chat.whatsapp.com/DnBijHRH4pTFQ7W5ymyPLI" class="linkified">https://chat.whatsapp.com/DnBijHRH4pTFQ7W5ymyPLI</a><br/>If any questions, please contact [masked]<br/>The session will be shared only via Skype</p>',
+        description: '<p>Why were we born? Why are we living? What is the purpose of our life?</p>',
         visibility: 'public',
         member_pay_fee: false
       }
