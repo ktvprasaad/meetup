@@ -28,7 +28,8 @@ class Event extends Component {
                 </div>
                 {this.state.showHideFlag && 
                     <div className="more">
-                        <p className="description">{event.description}</p>
+                        <p className="groupName">{event.group.name}</p>
+                        <p className="location">{event.group.localized_location}</p>
                     </div>
                 }
                 <button className="details" onClick={() => this.detailsClicked()}>Details</button>

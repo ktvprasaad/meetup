@@ -15,7 +15,10 @@ describe('<Event /> component', () => {
                 local_date: '2020-02-01',
                 local_time: '08:00',
                 name: 'The Purpose of Life in Buddhism',
-                description: 'Why were we born? Why are we living? What is the purpose of our life?',
+                group: {
+                    name: 'München Meanings of Life in Buddhism Meetup',
+                    localized_location: 'München, Germany',
+                },
             }
           }/>
         );
@@ -37,7 +40,9 @@ describe('<Event /> component', () => {
         const eventObject = { target: { value: 'true' }};
         EventWrapper.find('.details').simulate('click', eventObject);
         expect(EventWrapper.state('showHideFlag')).toBe(true);
-        expect(EventWrapper.find('.more .description')).toHaveLength(1);
+        expect(EventWrapper.find('.more .groupName')).toHaveLength(1);
+        expect(EventWrapper.find('.more .location')).toHaveLength(1);
+
     });
 
     test('render previous state', () => {
@@ -45,12 +50,14 @@ describe('<Event /> component', () => {
         const eventObject = { target: { value: 'false' }};
         EventWrapper.find('.details').simulate('click', eventObject);
         expect(EventWrapper.state('showHideFlag')).toBe(false);
-        expect(EventWrapper.find('.more .description')).toHaveLength(0);
+        expect(EventWrapper.find('.more .groupName')).toHaveLength(0);
+        expect(EventWrapper.find('.more .location')).toHaveLength(0);
     });
 
-    test('hide description', () => {
+    test('hide more details', () => {
         EventWrapper.setState({ showHideFlag: false });
-        expect(EventWrapper.find('.more .description')).toHaveLength(0);
+        expect(EventWrapper.find('.more .groupName')).toHaveLength(0);
+        expect(EventWrapper.find('.more .location')).toHaveLength(0);
     });
 
     test('render correct information', () => {
@@ -59,7 +66,8 @@ describe('<Event /> component', () => {
         expect(EventWrapper.find('.name').text()).toEqual('The Purpose of Life in Buddhism');
         const eventObject = { target: { value: 'true' }};
         EventWrapper.find('.details').simulate('click', eventObject);
-        expect(EventWrapper.find('.description').text()).toEqual('Why were we born? Why are we living? What is the purpose of our life?');
+        expect(EventWrapper.find('.groupName').text()).toEqual('München Meanings of Life in Buddhism Meetup');
+        expect(EventWrapper.find('.location').text()).toEqual('München, Germany');
     });
 
     // test('render event', () => {
