@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 import App from '../App';
 import EventList from '../EventList';
 import CitySearch from '../CitySearch';
-import Event from '../Event';
+// import Event from '../Event';
 import NumberOfEvents from '../NumberOfEvents';
 import { mockEvents } from '../mock-events';
 
@@ -21,9 +21,9 @@ describe('<App /> component', () => {
     expect(AppWrapper.find(CitySearch)).toHaveLength(1);
   });
 
-  test('render Event', () => {
-    expect(AppWrapper.find(Event)).toHaveLength(1);
-  });
+  // test('render Event', () => {
+  //   expect(AppWrapper.find(Event)).toHaveLength(1);
+  // });
 
   test('render NumberOfEvents', () => {
     expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
@@ -32,7 +32,7 @@ describe('<App /> component', () => {
 });
 
 describe('<App /> integration', () => {
-  test('get list of events after user selects a city', async () => {
+  test('get list of events after user selects a city', () => {
     const AppWrapper = mount(<App />);
     AppWrapper.instance().updateEvents = jest.fn();
     AppWrapper.instance().forceUpdate();
@@ -52,9 +52,8 @@ describe('<App /> integration', () => {
 
   test('render correct list of events', () => {
     const AppWrapper = mount(<App />);
-    console.log(AppWrapper.debug());
-    AppWrapper.setState({ events: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 } ]});
-    expect(AppWrapper.find(Event)).toHaveLength(4);
+    AppWrapper.setState({ events: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }] });
+    expect(AppWrapper.find('.Event')).toHaveLength(4);
     AppWrapper.unmount();
   });
 

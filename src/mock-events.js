@@ -40,7 +40,7 @@ const mockEvents = {
           timezone: 'Europe/Berlin'
         },
         link: 'https://www.meetup.com/Munchen-Meanings-of-Life-in-Buddhism-Meetup/events/268259064/',
-        description: '<p>Why were we born? Why are we living? What is the purpose of our life?</p>',
+        description: 'Why were we born? Why are we living? What is the purpose of our life?',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -75,7 +75,7 @@ const mockEvents = {
         },
         link: 'https://www.meetup.com/Munchen-Drink-Click/events/268057247/',
         how_to_find_us: 'Irgendwo im Starbucks oder davor oder dahinter. (Es gibt einen zweiten Eingang zum Hofgarten hin). Du erkennst uns an den Kameras. :-) ',
-        description: '<p>Frei übersetzt. Das internationale Thema des Drick &amp; Click weltweit ist "Rat\'s Eye View".</p>',
+        description: 'Frei übersetzt. Das internationale Thema des Drick &amp; Click weltweit ist "Rat\'s Eye View".',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -109,7 +109,7 @@ const mockEvents = {
           timezone: 'Europe/Berlin'
         },
         link: 'https://www.meetup.com/deutsch-japanischer-stammtisch/events/lkgknpybcfbkc/',
-        description: '<p>Why were we born? Why are we living? What is the purpose of our life?</p>',
+        description: 'Herzlich willkommen beim deutsch-japanischen Sprach-Stammtisch! Wir sind eine nette Gruppe Deutscher und Japaner, die sich einmal im Monat zum Sprachaustausch trifft.',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -151,7 +151,7 @@ const mockEvents = {
           timezone: 'Europe/Berlin'
         },
         link: 'https://www.meetup.com/Munchen-Photography-Workshops/events/268001205/',
-        description: '<p>Why were we born? Why are we living? What is the purpose of our life?</p>',
+        description: 'Street photography is one of the most challenging, but at the same time one of the most rewarding genres of photography.',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -194,7 +194,7 @@ const mockEvents = {
         },
         link: 'https://www.meetup.com/Alpen-Yoga-Muenchen-Wandern-Yoga-und-Entspannen/events/268110411/',
         how_to_find_us: 'Wir sind im oberen Raum',
-        description: '<p>Hallo ihr Lieben,<br/>Lust auf Yoga? Komm für 4x75 Min. in den Basic-Kurs für Einsteiger!</p>',
+        description: 'Hallo ihr Lieben,<br/>Lust auf Yoga? Komm für 4x75 Min. in den Basic-Kurs für Einsteiger!',
         visibility: 'public',
         member_pay_fee: false
       },
@@ -228,7 +228,7 @@ const mockEvents = {
           timezone: 'Europe/Berlin'
         },
         link: 'https://www.meetup.com/Munchen-Meanings-of-Life-in-Buddhism-Meetup/events/268259084/',
-        description: '<p>Why were we born? Why are we living? What is the purpose of our life?</p>',
+        description: 'Why were we born? Why are we living? What is the purpose of our life?',
         visibility: 'public',
         member_pay_fee: false
       }

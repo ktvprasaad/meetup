@@ -5,7 +5,7 @@ import CitySearch from '../CitySearch';
 describe('<CitySearch /> component', () => {
     let CitySearchWrapper;
     beforeAll(() => {
-        CitySearchWrapper = shallow(<CitySearch />);
+        CitySearchWrapper = shallow(<CitySearch updateEvents={() => {}}/>);
     });
 
     test('render text input', () => {
@@ -22,9 +22,9 @@ describe('<CitySearch /> component', () => {
     });
 
     test('change state when text input changes', () => {
-        const eventObject = { target: { value: 'Munich' }};
+        const eventObject = { target: { value: 'Berlin' }};
         CitySearchWrapper.find('.city').simulate('change', eventObject);
-        expect(CitySearchWrapper.state('query')).toBe('Munich');
+        expect(CitySearchWrapper.state('query')).toBe('Berlin');
     });
 
     test('render list of suggestions correctly', () => {
@@ -35,7 +35,7 @@ describe('<CitySearch /> component', () => {
         }
     });
 
-    test('click on suggestion should change query state', () => {
+    test('click on suggestion should change query state and empty the list of suggestions', () => {
         CitySearchWrapper.setState({
           suggestions: [
             {
@@ -59,41 +59,41 @@ describe('<CitySearch /> component', () => {
             }
           ]
         });
-        // CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
-        CitySearchWrapper = shallow(<CitySearch updateEvents={() => {}}/>);
-        // expect(CitySearchWrapper.state('query')).toBe('Munich, Germany');
-        CitySearchWrapper.instance().handleItemClicked('value', 1.1, 1.2);
+        expect(CitySearchWrapper.find('.suggestions li')).toHaveLength(2);
+        CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
+        expect(CitySearchWrapper.state('query')).toBe('Munich, Germany');
+        expect(CitySearchWrapper.find('.suggestions li')).toHaveLength(0);;
 
     });
 
 });
 
 describe('<CitySearch /> integration ', () => {
-  test('get a list of cities when usesr searches for Munich', async () => {
+  test('get a list of cities when user searches for Munich', async () => {
     const CitySearchWrapper = shallow(<CitySearch />);
-    CitySearchWrapper.find('.city').simulate('change', { target: {value: 'Munich'}});
-    await CitySearchWrapper.update(); 
+    CitySearchWrapper.find('.city').simulate('change', { target: { value: 'Munich' } });
+    await CitySearchWrapper.update();
     expect(CitySearchWrapper.state('suggestions')).toEqual([
-      {
-        city: 'Munich',
-        country: 'de',
-        localized_country_name: 'Germany',
-        name_string: 'Munich, Germany',
-        zip: 'meetup3',
-        lat: 48.14,
-        lon: 11.58
-      },
-      {
-        city: 'Munich',
-        country: 'us',
-        localized_country_name: 'USA',
-        state: 'ND',
-        name_string: 'Munich, North Dakota, USA',
-        zip: '58352',
-        lat: 48.66,
-        lon: -98.85
-      }
-    ])
+        {
+          city: 'Munich',
+          country: 'de',
+          localized_country_name: 'Germany',
+          name_string: 'Munich, Germany',
+          zip: 'meetup3',
+          lat: 48.14,
+          lon: 11.58
+        },
+        {
+          city: 'Munich',
+          country: 'us',
+          localized_country_name: 'USA',
+          state: 'ND',
+          name_string: 'Munich, North Dakota, USA',
+          zip: '58352',
+          lat: 48.66,
+          lon: -98.85
+        }
+      ]);
   });
 
 });
