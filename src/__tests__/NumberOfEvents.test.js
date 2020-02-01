@@ -12,6 +12,11 @@ describe('<NumberOfEvents /> component', () => {
         expect(NumberOfEventsWrapper.find('.number')).toHaveLength(1);
     });
 
+    test('render number input correctly', () => {
+        const number = NumberOfEventsWrapper.state('displayCount');
+        expect(NumberOfEventsWrapper.find('.number').prop('value')).toBe(number);
+    });
+
     test('change number of events when input changes', () => {
         const eventObject = { target: { value: '10' }};
         NumberOfEventsWrapper.find('.number').simulate('change', eventObject);
