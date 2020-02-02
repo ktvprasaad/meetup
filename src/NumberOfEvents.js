@@ -19,9 +19,7 @@ class NumberOfEvents extends Component {
                     type="text"
                     className="number"
                     value={this.state.displayCount}
-                    onChange={this.handleInputChanged}>
-                    {this.displayCount}
-                </input>
+                    onChange={this.handleInputChanged}/>
                 <span>Events</span>
             </div>
         );
