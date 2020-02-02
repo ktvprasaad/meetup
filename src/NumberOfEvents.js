@@ -9,6 +9,13 @@ class NumberOfEvents extends Component {
     handleInputChanged = (event) => {
         const value = event.target.value;
         this.setState({ displayCount: value });
+
+        if (value < 1) {
+            alert('Event Count cannot be less than 1');
+        } else {
+            console.log(value);
+            this.props.updateEvents(null, null, value);
+        }
     }
 
     render() {
@@ -16,7 +23,7 @@ class NumberOfEvents extends Component {
             <div className="NumberOfEvents">
                 <span>Show</span>
                 <input
-                    type="text"
+                    type="number"
                     className="number"
                     value={this.state.displayCount}
                     onChange={this.handleInputChanged}/>
