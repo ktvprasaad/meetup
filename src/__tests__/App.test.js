@@ -57,4 +57,18 @@ describe('<App /> integration', () => {
     AppWrapper.unmount();
   });
 
+  test('get list of events based on count on NumberOfEvents', () => {
+    const AppWrapper = mount(<App />);
+    AppWrapper.instance().updateEvents = jest.fn();
+    AppWrapper.instance().forceUpdate();
+
+    const eventObject = { target: { value: 10 }};
+    const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+    NumberOfEventsWrapper.find('.number').simulate('change', eventObject);
+
+    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledTimes(1);
+    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(null, null, 10);
+    AppWrapper.unmount();
+  });
+
 }); 

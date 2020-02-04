@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class NumberOfEvents extends Component {
 
     state = {
-        displayCount: 32
+        displayCount: 32,
+        error: false,
     } 
 
     handleInputChanged = (event) => {
@@ -11,9 +12,9 @@ class NumberOfEvents extends Component {
         this.setState({ displayCount: value });
 
         if (value < 1) {
-            alert('Event Count cannot be less than 1');
+            this.setState({ error: true });
         } else {
-            console.log(value);
+            this.setState({ error: false });
             this.props.updateEvents(null, null, value);
         }
     }
@@ -28,6 +29,7 @@ class NumberOfEvents extends Component {
                     value={this.state.displayCount}
                     onChange={this.handleInputChanged}/>
                 <span>Events</span>
+                {this.state.error && <div className="error">Event count cannot be less than 1!</div>}
             </div>
         );
     }
