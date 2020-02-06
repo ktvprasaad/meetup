@@ -7,6 +7,7 @@ import NumberOfEvents from './NumberOfEvents';
 import { getEvents } from './api';
 
 class App extends Component {
+  _isMounted = false;
 
   state = {
     events: [],
@@ -16,23 +17,37 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
     this.updateEvents();
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
   
   updateEvents = (lat, lon, page) => {
     // getEvents(lat, lon).then(events => this.setState({ events }));
     if (lat && lon) {
-      getEvents(lat, lon, this.state.page).then(events =>
-        this.setState({ events, lat, lon })
-      );
+      getEvents(lat, lon, this.state.page)
+      .then(events => {
+          if ( this._isMounted ) {
+            this.setState({ events, lat, lon });
+          }
+        });
     } else if (page) {
-      getEvents(this.state.lat, this.state.lon, page).then(events =>
-        this.setState({ events, page })
-      );
+      getEvents(this.state.lat, this.state.lon, page)
+      .then(events => {
+        if ( this._isMounted ) {
+          this.setState({ events, page })
+        }
+      });
     } else {
-      getEvents(this.state.lat, this.state.lon, this.state.page).then(events =>
-        this.setState({ events })
-      );
+      getEvents(this.state.lat, this.state.lon, this.state.page)
+      .then(events => {
+        if ( this._isMounted ) {
+          this.setState({ events })
+        }
+      });
     }
   }
 
