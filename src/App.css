@@ -27,6 +27,10 @@ input[type="text"], input[type="number"] {
   height: 38px;
 }
 
+input:focus {
+  background-color: #c8cfc7;
+}
+
 .city {
   width: 250px;
 }
@@ -34,6 +38,7 @@ input[type="text"], input[type="number"] {
 .CitySearch {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .suggestions {
@@ -67,6 +72,14 @@ input[type="text"], input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  background-color: #464960;
+  color: white;
+}
+
+.EventList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .details {
@@ -77,6 +90,24 @@ input[type="text"], input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  border: none;
+  background-color: #afb6bd;
+  color: black;
+  margin: 5px;
+}
+
+.details:hover {
+  background-color: #464960;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.more {
+  background-color: #ececef;
+  color: black;
+  margin-right: 70px;
+  border-radius: 4px;
 }
 
 .name {
@@ -101,6 +132,20 @@ input[type="text"], input[type="number"] {
   width: 80px;
   margin: 20px 0 50px;
   text-align: right;
+}
+
+span {
+  font-weight: 700;  
+}
+
+.error {
+  color: red;
+}
+
+@media all and (max-width: 500px) {
+.EventList {
+    grid-template-columns: 1fr;
+  }
 }
 /* .App {
   text-align: center;
