@@ -2,7 +2,7 @@ import React from 'react';
 import { loadFeature, defineFeature } from 'jest-cucumber';
 import App from '../App';
 import Event from '../Event';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { mockEvents } from '../mock-events';
 
 const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
@@ -12,7 +12,7 @@ defineFeature(feature, test => {
     let AppWrapper;
     given('user opens the app', () => {
       AppWrapper = mount(<App />);
-  });E
+  });
 
     when('user hasn’t opened any event', () => {
       expect(AppWrapper.find('.details')).toHaveLength(0);
@@ -36,7 +36,7 @@ defineFeature(feature, test => {
     });
 
     then('the details of the selected event will show', () => {
-      expect(AppWrapper.find('.details')).toHaveLength(1);
+      expect(AppWrapper.find('.more')).toHaveLength(1);
     });
   });
 
@@ -57,7 +57,7 @@ defineFeature(feature, test => {
     });
 
     then('the details of the events are collapsed', () => {
-      expect(AppWrapper.find('.details')).toHaveLength(0);
+      expect(AppWrapper.find('.more')).toHaveLength(0);
     });
 
     and('only the list of events is shown', () => {
