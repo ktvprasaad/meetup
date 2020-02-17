@@ -138,8 +138,8 @@ span {
   font-weight: 700;  
 }
 
-.error {
-  color: red;
+.Alert {
+  height: 20px;
 }
 
 @media all and (max-width: 500px) {

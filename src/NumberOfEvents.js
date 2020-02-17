@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
+import { ErrorAlert } from './Alert';
 
 class NumberOfEvents extends Component {
 
     state = {
         displayCount: 32,
-        error: false,
     } 
 
     handleInputChanged = (event) => {
         const value = event.target.value;
         this.setState({ displayCount: value });
 
-        if (value < 1) {
-            this.setState({ error: true });
+        if (value < 1 ) {
+            this.setState({
+                infoText: "Number shoud be at least 1",
+            });
         } else {
-            this.setState({ error: false });
+            this.setState({
+                infoText: '',
+            });
             this.props.updateEvents(null, null, value);
         }
     }
@@ -29,7 +33,7 @@ class NumberOfEvents extends Component {
                     value={this.state.displayCount}
                     onChange={this.handleInputChanged}/>
                 <span>Events</span>
-                {this.state.error && <div className="error">Event count cannot be less than 1!</div>}
+                <ErrorAlert text={this.state.infoText} /> 
             </div>
         );
     }
