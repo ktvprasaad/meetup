@@ -138,10 +138,6 @@ span {
   font-weight: 700;  
 }
 
-.Alert {
-  height: 20px;
-}
-
 @media all and (max-width: 500px) {
 .EventList {
     grid-template-columns: 1fr;
