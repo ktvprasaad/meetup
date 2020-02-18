@@ -96,7 +96,7 @@ input:focus {
   margin: 5px;
 }
 
-.details:hover {
+.details:hover, .details:focus {
   background-color: #464960;
   color: white;
   border-style: solid;

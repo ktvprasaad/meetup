@@ -20,6 +20,7 @@ class Event extends Component {
     render() {
         const event = this.props.event;
         return (
+            <nav>
             <div className="Event">
                 <div className="less">
                     <p className="date">{event.local_date}</p>
@@ -34,6 +35,7 @@ class Event extends Component {
                 }
                 <button className="details" onClick={() => this.detailsClicked()}>Details</button>
             </div>
+            </nav>
         );
     }
 }
