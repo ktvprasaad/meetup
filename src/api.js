@@ -97,7 +97,7 @@ async function getEvents(lat, lon, page) {
         return mockEvents.events;
     }
 
-    if (!navigator.online) {
+    if (!navigator.onLine) {
       const events = localStorage.getItem('lastEvents');
       return JSON.parse(events);
     }
