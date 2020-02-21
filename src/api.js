@@ -80,6 +80,11 @@ async function getSuggestions(query) {
         ];
     }
 
+    if (!navigator.online) {
+      const events = localStorage.getItem('lastEvents');
+      return JSON.parse(events);
+    }
+
     const token = await getAccessToken();
     if (token) {
       const url = 'https://api.meetup.com/find/locations?&sign=true&photo-host=public&query='
@@ -110,7 +115,12 @@ async function getEvents(lat, lon, page) {
             url += '&page=' + page;
         }
         const result = await axios.get(url);
-        return result.data.events;
+        // return result.data.events;
+        const events = result.data.events;
+        if (events.length) { // Check if the events exist
+          localStorage.setItem('lastEvents', JSON.stringify(events));
+        }
+        return events;
       }
       return [];
 }
