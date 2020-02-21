@@ -80,11 +80,6 @@ async function getSuggestions(query) {
         ];
     }
 
-    if (!navigator.online) {
-      const events = localStorage.getItem('lastEvents');
-      return JSON.parse(events);
-    }
-
     const token = await getAccessToken();
     if (token) {
       const url = 'https://api.meetup.com/find/locations?&sign=true&photo-host=public&query='
@@ -102,6 +97,11 @@ async function getEvents(lat, lon, page) {
         return mockEvents.events;
     }
 
+    if (!navigator.online) {
+      const events = localStorage.getItem('lastEvents');
+      return JSON.parse(events);
+    }
+    
     const token = await getAccessToken();
 
     if (token) {
