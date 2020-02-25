@@ -18,7 +18,7 @@ const mockEvents = {
         date_in_series_pattern: false,
         status: 'upcoming',
         time: 1580540400000,
-        local_date: '2020-02-01',
+        local_date: '2020-02-26',
         local_time: '08:00',
         updated: 1580186017000,
         utc_offset: 3600000,
@@ -49,10 +49,11 @@ const mockEvents = {
         duration: 10800000,
         id: '268057247',
         name: 'Drink&Click™ München, Februar, Froschperspektive',
+        rsvp_limit: 50,
         date_in_series_pattern: false,
         status: 'upcoming',
         time: 1581253200000,
-        local_date: '2020-02-09',
+        local_date: '2020-02-27',
         local_time: '14:00',
         updated: 1579522911000,
         utc_offset: 3600000,
@@ -84,10 +85,11 @@ const mockEvents = {
         duration: 10800000,
         id: 'lkgknpybcfbkc',
         name: 'Deutsch-Japanischer\u00ad Stammtisch',
+        rsvp_limit: 10,
         date_in_series_pattern: false,
         status: 'upcoming',
         time: 1585332000000,
-        local_date: '2020-03-27',
+        local_date: '2020-02-27',
         local_time: '19:00',
         updated: 1522694856000,
         utc_offset: 3600000,
@@ -129,7 +131,7 @@ const mockEvents = {
         date_in_series_pattern: false,
         status: 'upcoming',
         time: 1580563800000,
-        local_date: '2020-02-01',
+        local_date: '2020-02-28',
         local_time: '14:30',
         updated: 1579611681000,
         utc_offset: 3600000,
@@ -171,7 +173,7 @@ const mockEvents = {
         date_in_series_pattern: false,
         status: 'upcoming',
         time: 1586271600000,
-        local_date: '2020-04-07',
+        local_date: '2020-02-29',
         local_time: '17:00',
         updated: 1579696976000,
         utc_offset: 7200000,
@@ -203,15 +205,16 @@ const mockEvents = {
         duration: 3600000,
         id: '268259084',
         name: 'The Purpose of Life in Buddhism',
+        rsvp_limit: 100,
         date_in_series_pattern: false,
         status: 'upcoming',
         time: 1580626800000,
-        local_date: '2020-02-02',
+        local_date: '2020-03-01',
         local_time: '08:00',
         updated: 1580186069000,
         utc_offset: 3600000,
-        waitlist_count: 0,
-        yes_rsvp_count: 3,
+        waitlist_count: 10,
+        yes_rsvp_count: 100,
         group: {
           created: 1449538782000,
           name: 'München Meanings of Life in Buddhism Meetup',
@@ -235,4 +238,35 @@ const mockEvents = {
     ]
 };
 
-export { mockEvents };
+const data = [
+  {
+    date: '2020-02-25', // Tomorrow
+    number: 10,
+  },
+  {
+    date: '2020-02-26',
+    number: 8,
+  },
+  {
+    date: '2020-02-27',
+    number: 3,
+  },
+  {
+    date: '2020-02-28',
+    number: 7,
+  },
+  {
+    date: '2020-02-29',
+    number: 1,
+  },
+  {
+    date: '2020-03-01',
+    number: 9,
+  },
+  {
+    date: '2020-03-02',
+    number: 2,
+  },
+];
+
+export { mockEvents, data };

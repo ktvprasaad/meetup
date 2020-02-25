@@ -7,6 +7,27 @@
   box-sizing: border-box;
 }
 
+.meetup {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#city {
+  color: #8884d8;
+  text-align: center;
+  font-weight: 700;
+  font-size: x-large;
+  font-style: italic;
+  font-stretch: wider;
+}
+
+.grid {
+  background-color: #fffff0;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -63,6 +84,9 @@ input:focus {
 
 .suggestions > li:hover {
   background-color: #a6aba8;
+  border-radius: 4px;
+  outline: none;
+  /* border: 1px solid #ccc; */
 }
 
 .Event {
@@ -91,16 +115,17 @@ input:focus {
   outline: none;
   cursor: pointer;
   border: none;
-  background-color: #afb6bd;
-  color: black;
+  background-color: #464960;
+  color: white;
   margin: 5px;
+  border-style: solid;
 }
 
 .details:hover, .details:focus {
-  background-color: #464960;
-  color: white;
-  border-style: solid;
-  border-width: 1px;
+  background-color: white;
+  color: #464960;
+  /* background-color: #afb6bd;
+  color: black; */
 }
 
 .more {
