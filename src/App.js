@@ -109,8 +109,8 @@ class App extends Component {
             <Legend />
             <Scatter data={this.getData()} dataKey="# of Events on Date" fill="#8884d8" />
           </ScatterChart>
-        </ResponsiveContainer>
-        <WarningAlert text={this.state.warnText}/>
+        </ResponsiveContainer>  
+        {!navigator.onLine && <WarningAlert text={this.state.warnText}/>}
         <EventList events={this.state.events}/>
       </div>
     );
