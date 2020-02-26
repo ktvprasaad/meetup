@@ -19,7 +19,7 @@ class App extends Component {
     lat: null,
     lon: null,
     page: null,
-    warnText: '',
+    warnText: "No Internet!! Events are shown from cache & may not be up to date!",
   }
 
   componentDidMount() {

@@ -19,7 +19,7 @@ class EventList extends Component {
                     </li>
                     )}
                 </ul>
-                { this.props.events.length === 0 && <WarningAlert  text={this.state.warnText}/>}
+                { this.props.events.length === 0 && <WarningAlert text={this.state.warnText}/>}
             </div>
         );
     }
