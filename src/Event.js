@@ -38,10 +38,10 @@ class Event extends Component {
                         <span> @ </span>{event.local_time}
                     </p>
                     { event.rsvp_limit && <ResponsiveContainer height={180}>
-                        <PieChart width={100} height={100}>
+                        <PieChart width={150} height={150}>
                         <Legend align="left"/>
                             <Pie data={this.getCount()} 
-                                cx={200} cy={80} innerRadius={40} outerRadius={60} label>
+                                cx={150} cy={75} innerRadius={40} outerRadius={50} label>
                                 	{
                                         this.getCount().map((entry, index) => (
                                         <Cell key={`cell-${index}`} fill={colors[index]}/>
@@ -54,7 +54,6 @@ class Event extends Component {
                 </div>
                 {this.state.showHideFlag && 
                     <div className="more">
-                        <p className="description"><span>Description: </span>{event.description}</p>
                         <p className="groupName"><span>Name: </span>{event.group.name}</p>
                         <p className="location"><span>Where: </span>{event.group.localized_location}</p>
                         <p className="location">
