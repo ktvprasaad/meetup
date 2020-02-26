@@ -10,7 +10,7 @@
     {
       "src": "meetup.png",
       "type": "image/png",
-      "sizes": "1260x1260"
+      "sizes": "300x300"
     }
   ],
   "start_url": ".",

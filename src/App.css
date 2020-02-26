@@ -9,8 +9,8 @@
 
 .meetup {
   display: block;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 250px;
+  max-height: 250px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -35,6 +35,16 @@ ul {
 
 p {
   margin: 5px 0;
+}
+
+a {
+  color: #ca9d82;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none; 
+  color: #82ca9d;
 }
 
 input[type="text"], input[type="number"] {
@@ -119,13 +129,19 @@ input:focus {
   color: white;
   margin: 5px;
   border-style: solid;
+  margin-left: auto;
+  margin-right: 0;
+
 }
 
-.details:hover, .details:focus {
+.details:hover {
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  border: none;
   background-color: white;
   color: #464960;
-  /* background-color: #afb6bd;
-  color: black; */
+  border-style: solid;
 }
 
 .more {
@@ -149,9 +165,9 @@ input:focus {
   font-style: italic;
 }
 
-.description {
+/* .description {
   overflow-x: hidden;
-}
+} */
 
 .number-of-events {
   width: 80px;
@@ -159,8 +175,12 @@ input:focus {
   text-align: right;
 }
 
-span {
+.NumberOfEvents, span {
   font-weight: 700;  
+}
+
+.PieChart {
+  display: block;
 }
 
 @media all and (max-width: 500px) {

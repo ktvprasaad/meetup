@@ -30,19 +30,18 @@ class Event extends Component {
     render() {
         const event = this.props.event;
         let colors = ['#ca9d82','#82ca9d'];
-        console.log(event.rsvp_limit, event.yes_rsvp_count, event.rsvp_limit - event.yes_rsvp_count);
         return (
             <div className="Event">
                 <div className="less">
                     <p className="name">{event.name}</p>
-                    <p className="date">Date: {event.local_date}
-                        <span className="time"> Time: {event.local_time}</span>
+                    <p className="date"><span>On </span>{event.local_date}
+                        <span> @ </span>{event.local_time}
                     </p>
                     { event.rsvp_limit && <ResponsiveContainer height={180}>
                         <PieChart width={100} height={100}>
-                        <Legend />
+                        <Legend align="left"/>
                             <Pie data={this.getCount()} 
-                                cx={200} cy={80} innerRadius={40} outerRadius={60}>
+                                cx={200} cy={80} innerRadius={40} outerRadius={60} label>
                                 	{
                                         this.getCount().map((entry, index) => (
                                         <Cell key={`cell-${index}`} fill={colors[index]}/>
@@ -51,13 +50,16 @@ class Event extends Component {
                             </Pie>
                             <Tooltip />
                         </PieChart>
-
                     </ResponsiveContainer> }
                 </div>
                 {this.state.showHideFlag && 
                     <div className="more">
-                        <p className="groupName">{event.group.name}</p>
-                        <p className="location">{event.group.localized_location}</p>
+                        <p className="description"><span>Description: </span>{event.description}</p>
+                        <p className="groupName"><span>Name: </span>{event.group.name}</p>
+                        <p className="location"><span>Where: </span>{event.group.localized_location}</p>
+                        <p className="location">
+                            <a href={event.link} target="_blank"><span>More about the event</span></a>
+                        </p>
                     </div>
                 }
                 <button className="details" onClick={() => this.detailsClicked()}>Details</button>
