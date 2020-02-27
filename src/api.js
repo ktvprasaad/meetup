@@ -9,7 +9,7 @@ async function getOrRenewAccessToken(type, key) {
         + key;
     } else if (type === 'renew') {
       // Lambda endpoint to get token by refresh_token
-      url = 'https://dwmkm8fd85.execute-api.us-east-2.amazonaws.com/dev/api/refresh/'
+      url = 'https://dwmkm8fd85.execute-api.us-east-2.amazonaws.com/api/refresh/'
         + key;
     }
   
