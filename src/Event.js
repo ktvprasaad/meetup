@@ -37,11 +37,11 @@ class Event extends Component {
                     <p className="date"><span>On </span>{event.local_date}
                         <span> @ </span>{event.local_time}
                     </p>
-                    { event.rsvp_limit && <ResponsiveContainer height={180}>
+                    { event.rsvp_limit > 0 && <ResponsiveContainer height={180}>
                         <PieChart width={150} height={150}>
                         <Legend align="left"/>
                             <Pie data={this.getCount()} 
-                                cx={150} cy={75} innerRadius={40} outerRadius={50} label>
+                                cx={100} cy={75} innerRadius={40} outerRadius={50} label>
                                 	{
                                         this.getCount().map((entry, index) => (
                                         <Cell key={`cell-${index}`} fill={colors[index]}/>
