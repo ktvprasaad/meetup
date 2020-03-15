@@ -5,7 +5,7 @@ async function getOrRenewAccessToken(type, key) {
     let url;
     if (type === 'get') {
       // Lambda endpoint to get token by code
-      url = 'https://dwmkm8fd85.execute-api.us-east-2.amazonaws.com/api/token/'
+      url = 'https://dwmkm8fd85.execute-api.us-east-2.amazonaws.com/dev/api/token/'
         + key;
     } else if (type === 'renew') {
       // Lambda endpoint to get token by refresh_token
